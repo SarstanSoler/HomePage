@@ -29,3 +29,7 @@ body {
   height: 100%;
   z-index: -1;
 }
+canvas {
+    border: 2px solid red;
+    z-index: 1000;
+}
