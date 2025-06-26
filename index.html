@@ -3,24 +3,21 @@
 
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
   <script>
-    tsParticles.load("tsparticles", {
-      fullScreen: {
-        enable: true,
-        zIndex: -1
-      },
-      background: {
-        color: { value: "#000" }
-      },
-      particles: {
-        number: { value: 80 },
-        size: { value: 3 },
-        color: { value: "#ff0000" },
-        move: { enable: true, speed: 2 }
-      }
-    }).then(() => {
-      console.log("Particles are alive!");
-    }).catch((e) => {
-      console.error("tsParticles failed:", e);
+    document.addEventListener("DOMContentLoaded", () => {
+      tsParticles.load("tsparticles", {
+        fullScreen: { enable: true, zIndex: -1 },
+        background: { color: { value: "#000" } },
+        particles: {
+          number: { value: 80 },
+          color: { value: "#00ff00" },
+          size: { value: 3 },
+          move: { enable: true, speed: 2 }
+        }
+      }).then(() => {
+        console.log("Particles finally summoned!");
+      }).catch((e) => {
+        console.error("tsParticles error:", e);
+      });
     });
   </script>
 </body>
