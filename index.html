@@ -1,27 +1,26 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Sarstan's Site!</title>
-</head>
 <body>
-    <div id="tsparticles"></div>
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
-<script src="app.js"></script>
-<h1>
-Hello everyone and welcome to my site!
-</h1>
-<font size = 4>
-Admittedly it's not much right now but...
-</font>
-<br>
-<br>
-<font size = 8>
-<center>
-I'm working on it!
-</center>
-</font>
+  <div id="tsparticles"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <script>
+    tsParticles.load("tsparticles", {
+      fullScreen: {
+        enable: true,
+        zIndex: -1
+      },
+      background: {
+        color: { value: "#000" }
+      },
+      particles: {
+        number: { value: 80 },
+        size: { value: 3 },
+        color: { value: "#ff0000" },
+        move: { enable: true, speed: 2 }
+      }
+    }).then(() => {
+      console.log("Particles are alive!");
+    }).catch((e) => {
+      console.error("tsParticles failed:", e);
+    });
+  </script>
 </body>
-</html>
